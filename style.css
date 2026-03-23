@@ -14,6 +14,7 @@ html {
 }
 
 :root {
+  --darkest-grey: #0f1111;
   --dark-grey: #131921;
   --mid-light-grey: #232f3e;
   --light-grey: #37475a;
@@ -27,8 +28,16 @@ html {
 }
 
 body {
-  background-color: black;
   color: white;
+}
+
+@font-face {
+  font-family: "Amazon Ember Bold";
+  font-style: normal;
+  font-weight: normal;
+  src:
+    local("Amazon Ember Bold"),
+    url("./amazon-ember-webfont/Amazon\ Ember\ Bold.woff") format("woff");
 }
 
 /* ! ******************* Nav Started ******************* */
@@ -277,6 +286,79 @@ nav {
 }
 
 /* ! ******************* Nav Ended ******************* */
+
+/* ! ******************* Header Started ******************* */
+
+/* ? Mobile Header */
+.header-mb {
+  /*border: 1px solid red;*/
+
+  height: 530px;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  overflow-x: auto;
+
+  gap: 20px;
+  padding: 10px 20px;
+  scrollbar-width: none;
+}
+
+.img-1 {
+  background: url("https://m.media-amazon.com/images/I/61Ld77LHXQL._SX855_.jpg");
+}
+.img-2 {
+  background: url("https://m.media-amazon.com/images/I/51l7ZOsRo7L._SX855_.jpg");
+}
+.img-3 {
+  background: url("https://m.media-amazon.com/images/I/61R7G24e7dL._SX855_.jpg");
+}
+.img-4 {
+  background: url("https://m.media-amazon.com/images/I/613fnGHLTYL._SX855_.jpg");
+}
+.img-5 {
+  background: url("https://m.media-amazon.com/images/I/61upHi2gzaL._SX855_.jpg");
+}
+.img-6 {
+  background: url("https://m.media-amazon.com/images/I/71RXuGx+znL._SX855_.jpg");
+}
+.img-7 {
+  background: url("https://m.media-amazon.com/images/I/714RPvHc4LL._SX855_.jpg");
+}
+
+.img-1,
+.img-2,
+.img-3,
+.img-4,
+.img-5,
+.img-6,
+.img-7 {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header-mb .img-div {
+  /*border: 1px solid red;*/
+  color: var(--darkest-grey);
+
+  height: 100%;
+  width: 330px;
+
+  flex-shrink: 0;
+  border-radius: 10px;
+  padding: 20px 10px;
+
+  font-size: 3rem;
+  font-weight: normal;
+  font-family: "Amazon Ember Bold";
+  letter-spacing: -2px;
+  line-height: 40px;
+}
+/* ! ******************* Header Ended ******************* */
 
 /* ! ******************* Media Queries ******************* */
 
