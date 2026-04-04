@@ -363,7 +363,7 @@ nav {
 
 /* ? Desktop Header */
 
-.header-dsk {
+.header-img-div {
   display: none;
 }
 
@@ -376,7 +376,7 @@ nav {
   color: var(--darkest-grey);
 
   width: 100%;
-  height: auto;
+  height: 100%;
 
   display: flex;
   align-items: center;
@@ -459,6 +459,75 @@ nav {
 
 /* ! ******************* Square Cards Ended ******************* */
 
+/* ! ******************* Row product carousel Started ******************* */
+
+.row-product--carousel {
+  /* border: 1px solid red; */
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+}
+
+.row-product--carousel h3 {
+  /* border: 1px solid red; */
+  color: var(--darkest-grey);
+
+  padding: 5px 20px;
+  font-size: 1.4rem;
+}
+
+.products-main--div {
+  /* border: 1px solid red; */
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.product-div {
+  /* border: 1px solid red; */
+
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  grid-template-rows: 170px;
+
+  padding: 5px 20px;
+}
+
+.product-div p {
+  /* border: 1px solid red; */
+  color: var(--darkest-grey);
+
+  width: 100%;
+
+  padding-left: 20px;
+}
+
+.single-img--div {
+  /* border: 1px solid red; */
+
+  width: 100%;
+  height: 100%;
+
+  justify-self: center;
+}
+
+.single-img--div img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+
+/* ! ******************* Row product carousel Ended ******************* */
+
 /* ! ******************* Media Queries ******************* */
 
 @media (width >= 640px) {
@@ -468,6 +537,10 @@ nav {
 }
 
 @media (width >= 768px) {
+  body {
+    background-color: var(--lightest-grey);
+  }
+
   .border {
     border: 2px solid var(--dark-grey);
     border-radius: 4px;
@@ -753,7 +826,14 @@ nav {
 
   /* ? Header Desktop */
 
-  .header-dsk {
+  .main-header-div {
+    /* border: 1px solid red; */
+
+    width: 100%;
+    height: 100%;
+  }
+
+  .header-img-div {
     /* border: 1px solid red; */
 
     width: 100%;
@@ -762,7 +842,7 @@ nav {
     display: block;
   }
 
-  .header-dsk img {
+  .header-img-div img {
     width: 100%;
     height: 100%;
 
@@ -772,6 +852,7 @@ nav {
   /* ? Product cards */
 
   .card-products--main {
+    /* border: 1px solid red; */
     background: linear-gradient(
       to bottom,
       transparent 5%,
@@ -781,8 +862,10 @@ nav {
     flex-direction: row;
     flex-wrap: wrap;
 
-    position: absolute;
-    top: 300px;
+    z-index: 2;
+
+    position: relative;
+    margin-top: -350px;
   }
 
   .card-product--card {
@@ -796,6 +879,43 @@ nav {
 
   .card-product--card h3 {
     font-size: 1.2rem;
+  }
+
+  .pic p {
+    font-size: 0.8rem;
+  }
+
+  .row-product--carousel {
+    /* border: 1px solid red; */
+    background-color: var(--white);
+
+    width: 90%;
+    height: 250px;
+
+    margin: 0 auto;
+
+    padding: 10px;
+  }
+
+  .products-main--div {
+    /* border: 1px solid red; */
+
+    flex-direction: row;
+
+    overflow-x: auto;
+  }
+
+  .product-div {
+    /* border: 1px solid red; */
+
+    grid-template-columns: 171px;
+    grid-template-rows: 171px;
+
+    align-self: center;
+  }
+
+  .product-div p {
+    display: none;
   }
 }
 
